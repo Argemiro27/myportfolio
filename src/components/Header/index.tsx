@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import Switch from "react-switch";
+import Switch from 'react-switch';
 import { ThemeContext } from "styled-components";
 import { shade } from "polished";
 import { Container } from "./styles";
