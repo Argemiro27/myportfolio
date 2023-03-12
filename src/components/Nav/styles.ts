@@ -1,25 +1,23 @@
-
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Nav = styled.nav`
   display: flex;
   align-items: center;
-  background-color: #191621;
   width: 510px;
-  border: 2px dashed #282436;
   border-radius: 5px;
+  ${({ theme }) => theme.title === 'dark' && css`border: 2px dashed #422433; background-color: #24212e;`}
+  ${({ theme }) => theme.title === 'light' && css`border: 2px dashed #a682cf; background-color: #58377d`}
 `;
 
 export const NavLink = styled.a`
-  color: #fff;
   text-decoration: none;
   font-size: 16px;
   font-weight: 400;
   font-style: italic;
-  background-color: #24212e;
   padding: 15px;
   border-radius: 4px;
-  box-shadow: 5px 5px 2px 0px rgba(31,28,38,1);
+  ${({ theme }) => theme.title === 'dark' && css`background-color: #422433; color: #706280; box-shadow: 7px 7px 4px -3px rgba(59,32,45,1);`}
+  ${({ theme }) => theme.title === 'light' && css`background-color: #a682cf; color: #e6e6e6; box-shadow: 7px 7px 4px -3px rgba(127,108,148,1);`}
 `;
 
 export const Ul = styled.ul`

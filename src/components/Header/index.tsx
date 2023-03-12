@@ -3,8 +3,9 @@ import Switch from 'react-switch';
 import { ThemeContext } from "styled-components";
 import { shade } from "polished";
 import { Container } from "./styles";
-import ImgLogo from "../ImgLogo";
+import ImgLogoLight from "../Img/ImgLogoLight";
 import Nav from "../Nav";
+import ImgLogoDark from '../Img/ImgLogoDark';
 
 interface Props {
   toggleTheme(): void;
@@ -15,7 +16,7 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
 
   return (
     <Container>
-      <ImgLogo />
+      {title === "dark" ? <ImgLogoDark /> : <ImgLogoLight />}
       <Nav />
       <Switch
         onChange={toggleTheme}
@@ -26,7 +27,7 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
         width={40}
         handleDiameter={20}
         offColor={shade(0.15, colors.primary)}
-        onColor={colors.secundary}
+        onColor={colors.secondary}
       />
     </Container>
     

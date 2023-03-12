@@ -23,7 +23,7 @@ export const Title = styled.div`
   align-items: center;
   justify-content: center;
   font-size: 20px;
-  color: white;
+  color: #706280;
   width: 100%;
   height: 50px;
   position: absolute;
